@@ -1,0 +1,468 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+:root {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --largura: 1200px;
+    --cor-primaria: black;
+    --cor-secundaria: rgb(74, 198, 255);
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+header,
+nav,
+main,
+footer {
+    max-width: var(--largura);
+    margin: 0 auto;
+}
+
+header {
+    background-color: rgb(128, 148, 172);
+    display: flex;
+    height: 100px;
+}
+
+header #logo {
+    width: 200px;
+    padding: 8px 16px 8px 16px;
+    /* top right bottom left */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    /* ALINHAR VERTICAL */
+}
+
+header #logo img {
+    max-width: 100%;
+}
+
+header #banner {
+    width: 100%;
+    background-image: url("img/banner.webp");
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header #banner h4 {
+    padding: 0.5rem 1rem;
+    border-radius: 0 20px;
+    text-transform: uppercase;
+}
+
+nav {
+    background-color: rgb(122, 195, 255);
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    height: 2.2rem;
+}
+
+nav.responsive ul {
+    height: auto;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #333333;
+}
+
+nav ul li a:hover {
+    background-color: rgb(13, 218, 166);
+    color: white;
+    transition: 0.5s;
+}
+
+nav li:has(a.icon) {
+    position: absolute;
+    right: 0;
+}
+
+#carousel img {
+    max-width: 100%;
+}
+
+footer {
+    display: flex;
+}
+/* 1a DIV dentro do FOOTER */
+footer div:first-of-type {
+    width: 300px;
+    padding: 0.5rem 1rem;
+}
+
+footer #redessociais {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+footer ul li a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #333333;
+}
+
+footer ul li a span,
+footer #copy span {
+    display: none;
+}
+
+section {
+    margin-bottom: 3rem;
+    padding-top: 2.2rem;
+    margin-top: -2.2rem;
+}
+
+section .titulo h2 {
+    text-align: center;
+    border-bottom: 5px dashed olivedrab;
+    padding-bottom: 1rem;
+    font-family: "Permanent Marker", cursive;
+    font-size: 2rem;
+    color: orangered;
+}
+
+section .titulo h2:hover {
+    padding-left: 150px;
+    color: purple;
+    transition: 1s;
+}
+
+section .conteudo {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+section .conteudo .imagem {
+    width: 30%;
+}
+
+section .conteudo .imagem img {
+    width: 100%;
+    /* height: 200px; */
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+section .conteudo .texto {
+    width: 70%;
+}
+
+section .conteudo .texto p {
+    text-align: center ;
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+#destaques {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#destaques div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(50% - 1.5rem);
+    background-color: orangered;
+    padding: 1rem;
+    box-sizing: border-box;
+    aspect-ratio: 4 / 4;
+    border-radius: 50%;
+    color: white;
+}
+
+#destaques div i {
+    font-size: 4rem;
+}
+
+#destaques div h4 {
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin: 0;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+#destaques div:hover i {
+    transform: scale(2);
+    transition: 0.5s;
+}
+
+#Programa .conteudo .texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1 cm;
+}
+
+#Programa .conteudo {
+    align-items: center;
+}
+
+
+#galeria .conteudo {
+    flex-wrap: wrap;
+    gap: 1rem; /* 16px entre cada */
+}
+
+#galeria .conteudo .imagem {
+    width: calc(50% - 0.5 rem);
+}
+
+#galeria .conteudo .imagem img {
+    aspect-ratio: 4 / 3;
+    border-radius: 20px;
+    border: 10px solid orangered;
+    box-sizing: border-box;
+}
+
+#galeria .conteudo .imagem.video img {
+    aspect-ratio: 16 / 9;
+    text-align: center;
+    justify-content: center;
+}
+
+#galeria .conteudo .imagem h5 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0.5rem;
+    text-align: center;
+    color: grey;
+}
+
+#contactos .conteudo {
+    flex-wrap: wrap;
+}
+
+#contactos .conteudo > div {
+    width: calc(50% - 0.5rem);
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+#contactos .conteudo > .mapa {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.form-group input:not([type="submit"]),
+.form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 2px dashed grey;
+    box-sizing: border-box;
+    background-color: bisque;
+}
+
+.form-group input:not([type="submit"]):focus,
+.form-group textarea:focus {
+    background-color: pink;
+}
+
+.form-group textarea {
+    height: 8rem;
+    resize: none;
+}
+
+input[type="submit"] {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: darkgreen;
+}
+
+@media only screen and (min-width: 576px) {
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav li:has(a.icon) {
+        display: none;
+    }
+
+    #galeria .conteudo .imagem {
+        width: calc(33% - 0.667rem);
+    }
+
+    #destaques div {
+        width: calc(33% - 2rem);
+    }
+
+    #destaques div:nth-of-type(n + 4) {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    footer ul li a span,
+    footer #copy span {
+        display: inline;
+    }
+
+    #galeria .conteudo .imagem {
+        width: calc(25% - 0.75rem);
+    }
+
+    #destaques div {
+        width: calc(25% - 2.25rem);
+    }
+
+    #destaques div:nth-of-type(n + 4) {
+        display: flex;
+    }
+
+    #contactos .conteudo > div,
+    #contactos .conteudo > .mapa {
+        width: calc(33% - 0.667rem);
+    }
+}
+
+/* CAROUSEL / SLIDER */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    aspect-ratio: 3 / 1;
+    object-fit: cover;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 16px 12px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.9) 70%
+    );
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
